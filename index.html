@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="has-background-grey-darker" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whether Weather</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar has-background-grey-lighter">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="/images/logo.png" alt="Logo" />
+            </a>
+            <span class="navbar-burger has-background-grey-lighter" data-target="navbarMenu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end has-background-grey-lighter">
+                <a class="navbar-item has-text-black">
+                    Dashboard
+                </a>
+                <a class="navbar-item has-text-black">
+                    Forecast
+                </a>
+                <a class="navbar-item has-text-black">
+                    Submissions
+                </a>
+                <a class="navbar-item has-text-black">
+                    Settings
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="columns is-multiline has-background-grey-darker box">
+        <div class="column is-12 has-text-centered has-text-white">
+            <h1 class="is-size-1">Dashboard</h1>
+            <h2 class="is-size-6">Five word weather summary</h2>
+        </div>
+        <div class="column is-4">
+            <section class="card has-text-centered">
+                <header class="card-header">
+                    <h1 class="card-header-title is-size-4 is-centered">Dublin</h1>
+                </header>
+                <div class="card-image">
+                    <div class="card-image">
+                        <figure class="image">
+                            <img src="/images/sunRainCloud.png" alt="Image">
+                        </figure>
+                    </div>
+                </div>
+                <article class="card-content">
+                    <p class="content is-size-4">
+                        Cold and cloudy all day
+                    </p>
+                </article>
+                <footer class="card-footer">
+                    <div class="card-footer-item">
+                        <div class="box">
+                            <span class="temp-label">Low</span>
+                            <span class="temp-value">12°C</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-item">
+                        <div class="box">
+                            <span class="temp-label">High</span>
+                            <span class="temp-value">16°C</span>
+                        </div>
+                    </div>
+                    <div class="card-footer-item">
+                        <a href="https://example.com" class="button is-fullwidth">
+                            Open
+                        </a>
+                    </div>
+        </div>
+        </footer>
+        </section>
+        </div>
+        </div>
+    </main>
+    <footer class="footer has-background-grey-lighter has-text-white">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <img class="image is-16x16 is-inline" src="/images/logo.png" alt="Whether">Whether Weather.inc
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
