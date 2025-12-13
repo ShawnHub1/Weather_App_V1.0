@@ -1,0 +1,8 @@
+<main class="section my-bg">
+  ...
+</main>
+
+.my-bg {
+  background-color: #1e3a8a; /* whatever you want */
+  color: white;             /* set text color if needed */
+}

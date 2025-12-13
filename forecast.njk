@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="has-background-grey-darker" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Whether Weather</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+      {% include "nav.njk" %}
+        <main class="section has-background-info">
+        <div class="container box">
+            <div class="has-text-centered has-text-black">
+                <p class="subtitle is-6">7 Day forecast</p>
+            </div>
+            <div class="columns has-text-white has-background-info box">
+                            <div class="card-image">
+                    <figure class="image is-1">
+                        <img src="/images/sunRainCloud.png" alt="Image">
+                    </figure>
+                </div>
+                <div class="column">
+                    <div class="box has-background-grey-lighter has-text-black has-text-centered">
+                        <p>Today</p>
+                        <p>12°C – 16C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Mon</p>
+                        <p>8°C – 15°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Tue</p>
+                        <p>8°C – 18°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Wed</p>
+                        <p>2°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Thu</p>
+                        <p>3°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Fri</p>
+                        <p>1°C – 13°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Sat</p>
+                        <p>3°C – 11°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns has-text-white">
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Today</p>
+                        <p>12°C – 16C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Mon</p>
+                        <p>8°C – 15°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Tue</p>
+                        <p>8°C – 18°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Wed</p>
+                        <p>2°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Thu</p>
+                        <p>3°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Fri</p>
+                        <p>1°C – 13°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Sat</p>
+                        <p>3°C – 11°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns has-text-white">
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Today</p>
+                        <p>12°C – 16C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Mon</p>
+                        <p>8°C – 15°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Tue</p>
+                        <p>8°C – 18°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Wed</p>
+                        <p>2°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Thu</p>
+                        <p>3°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Fri</p>
+                        <p>1°C – 13°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Sat</p>
+                        <p>3°C – 11°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns has-text-white">
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Today</p>
+                        <p>12°C – 16C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Mon</p>
+                        <p>8°C – 15°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Tue</p>
+                        <p>8°C – 18°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Wed</p>
+                        <p>2°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Thu</p>
+                        <p>3°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Fri</p>
+                        <p>1°C – 13°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Sat</p>
+                        <p>3°C – 11°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns has-text-white">
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Today</p>
+                        <p>12°C – 16C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Mon</p>
+                        <p>8°C – 15°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Tue</p>
+                        <p>8°C – 18°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Wed</p>
+                        <p>2°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Thu</p>
+                        <p>3°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Fri</p>
+                        <p>1°C – 13°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Sat</p>
+                        <p>3°C – 11°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns has-text-white">
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Today</p>
+                        <p>12°C – 16C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Mon</p>
+                        <p>8°C – 15°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Tue</p>
+                        <p>8°C – 18°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Wed</p>
+                        <p>2°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Thu</p>
+                        <p>3°C – 10°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Fri</p>
+                        <p>1°C – 13°C</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="box has-background-black has-text-white has-text-centered">
+                        <p>Sat</p>
+                        <p>3°C – 11°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+      {% include "footer.njk" %}
+</body>
+
+</html>
