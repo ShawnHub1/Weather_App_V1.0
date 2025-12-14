@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="has-background-info" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title or "Whether Weather" }}</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css" />
+    <link rel="stylesheet" href="/css/structure.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="site">
+
+        {% include "nav.njk" %}
+
+        <main class="site-main">
+            {{ content | safe }}
+        </main>
+
+        {% include "footer.njk" %}
+
+    </div>
+</body>
+
+</html>

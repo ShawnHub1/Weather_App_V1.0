@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="has-background-info" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Settings</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css" />
+    <link rel="stylesheet" href="/css/structure.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="site">
+
+        <nav class="navbar has-background-link">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/index.html">
+      <img src="/images/logo.png" alt="Logo" />
+    </a>
+    <span class="navbar-burger has-background-grey-lighter" data-target="navbarMenu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </span>
+  </div>
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-end has-background-grey-lighter">
+      <a class="navbar-item has-text-black" href="/index">
+        Dashboard
+      </a>
+      <a class="navbar-item has-text-black" href="/settings">
+        Settings
+      </a>
+    </div>
+  </div>
+</nav>
+
+        <main class="site-main">
+            <main class="columns is-centered is-inline">
+    <section class="section">
+        <div class="container">
+
+
+            <h1 class="title is-1 has-text-centered mb-6">User Settings</h1>
+
+            <div class="columns is-centered is-variable is-8">
+                <!-- Favourite Cities -->
+                <div class="column is-4">
+                    <h2 class="title is-5 has-text-centered mb-3">Favourite Cities</h2>
+
+                    <div class="box has-background-info-light">
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>Dublin</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>Berlin</span>
+                                <input type="checkbox" checked>
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>Tokyo</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>New York</span>
+                                <input type="checkbox" checked>
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>Paris</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>London</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="field mt-5">
+                            <button class="button is-link is-fullwidth">Save Settings</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-4">
+                    <h2 class="title is-5 has-text-centered mb-3">Settings</h2>
+                    <div class="box has-background-info-light">
+                        <div class="field">
+                            <label class="label">Temperature Unit</label>
+                            <div class="control">
+                                <label class="radio mr-4">
+                                    <input type="radio" name="unit" checked>
+                                    Celsius
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="unit">
+                                    Fahrenheit
+                                </label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>7 Day Forecast</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>Gusts</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="field">
+                            <label class="checkbox is-flex is-justify-content-space-between is-align-items-center">
+                                <span>Wind</span>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="field mt-5">
+                            <button class="button is-link is-fullwidth">Save Settings</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+        </main>
+
+        <footer class="footer has-background-link has-text-black py-4">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <img class="image is-16x16 is-inline" src="/images/logo.png" alt="Whether">
+        Whether Weather.inc
+      </p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+</body>
+
+</html>

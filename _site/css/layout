@@ -1,0 +1,20 @@
+html, body {
+  height: 100%;
+}
+
+/* Put this class on a wrapper that contains nav + main + footer */
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Put this class on your main content wrapper */
+.site-main {
+  flex: 1;
+}
+
+/* Optional: footer never shrinks */
+.site-footer {
+  flex-shrink: 0;
+}

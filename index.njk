@@ -1,254 +1,229 @@
-<!DOCTYPE html>
-<html class="has-background-info" lang="en">
+---
+layout: base.njk
+title: Dashboard
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Whether Weather</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css" />
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-            $navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-                });
-            });
-        });
-    </script>
-</head>
-
-<body>
-  {% include "nav.njk" %}
-    <main class="columns is-multiline has-background-info box">
-        <div class="column is-12 has-text-centered has-text-black">
-            <h1 class="is-size-1">Dashboard</h1>
-            <h2 class="is-size-6">Five word weather summary</h2>
-        </div>
-        <div class="column is-4">
-            <section class="card has-text-centered">
-                <header class="card-header">
-                    <h2 class="card-header-title is-size-4 is-centered">Dublin</h2>
-                </header>
-                <div class="card-image">
-                    <figure class="image">
-                        <img src="/images/sunRainCloud.png" alt="Image">
-                    </figure>
+<main class="columns is-multiline has-background-info box">
+    <div class="column is-12 has-text-centered has-text-black">
+        <h1 class="is-size-1">Dashboard</h1>
+        <h2 class="is-size-6">Five word weather summary</h2>
+    </div>
+    <div class="column is-4">
+        <section class="card has-text-centered">
+            <header class="card-header">
+                <h2 class="card-header-title is-size-4 is-centered">Dublin</h2>
+            </header>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="/images/sunRainCloud.png" alt="Image">
+                </figure>
+            </div>
+            <article class="card-content">
+                <p class="content is-size-4">
+                    Cold cloudy with some rain
+                </p>
+            </article>
+            <footer class="card-footer">
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">Low</span>
+                        <span class="temp-value">12°C</span>
+                    </div>
                 </div>
-                <article class="card-content">
-                    <p class="content is-size-4">
-                        Cold cloudy with some rain
-                    </p>
-                </article>
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">Low</span>
-                            <span class="temp-value">12°C</span>
-                        </div>
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">High</span>
+                        <span class="temp-value">16°C</span>
                     </div>
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">High</span>
-                            <span class="temp-value">16°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <a href="/dublin" class="button is-fullwidth">
-                            Open
-                        </a>
-                    </div>
-        </div>
-        <div class="column is-4">
-            <section class="card has-text-centered">
-                <header class="card-header">
-                    <h2 class="card-header-title is-size-4 is-centered">London</h2>
-                </header>
-                <div class="card-image">
-                    <figure class="image">
-                        <img src="/images/wind.png" alt="Wind">
-                    </figure>
                 </div>
-                <article class="card-content">
-                    <p class="content is-size-4">
-                        Windy and no sun today
-                    </p>
-                </article>
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">Low</span>
-                            <span class="temp-value">7°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">High</span>
-                            <span class="temp-value">13°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <a href="/london" class="button is-fullwidth">
-                            Open
-                        </a>
-                    </div>
-                </footer>
-            </section>
-        </div>
-        <div class="column is-4">
-            <section class="card has-text-centered">
-                <header class="card-header">
-                    <h2 class="card-header-title is-size-4 is-centered">Paris</h2>
-                </header>
-                <div class="card-image">
-                    <figure class="image">
-                        <img src="/images/heavyrain.png" alt="Image">
-                    </figure>
+                <div class="card-footer-item">
+                    <a href="/dublin" class="button is-fullwidth">
+                        Open
+                    </a>
                 </div>
-                <article class="card-content">
-                    <p class="content is-size-4">
-                        Heavy rain all day today
-                    </p>
-                </article>
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">Low</span>
-                            <span class="temp-value">9°C</span>
-                        </div>
+    </div>
+    <div class="column is-4">
+        <section class="card has-text-centered">
+            <header class="card-header">
+                <h2 class="card-header-title is-size-4 is-centered">London</h2>
+            </header>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="/images/wind.png" alt="Wind">
+                </figure>
+            </div>
+            <article class="card-content">
+                <p class="content is-size-4">
+                    Windy and no sun today
+                </p>
+            </article>
+            <footer class="card-footer">
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">Low</span>
+                        <span class="temp-value">7°C</span>
                     </div>
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">High</span>
-                            <span class="temp-value">18°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <a href="/paris" class="button is-fullwidth">
-                            Open
-                        </a>
-                    </div>
-                </footer>
-            </section>
-        </div>
-        <div class="column is-4">
-            <section class="card has-text-centered">
-                <header class="card-header">
-                    <h2 class="card-header-title is-size-4 is-centered">Tokyo</h2>
-                </header>
-                <div class="card-image">
-                    <figure class="image">
-                        <img src="/images/storm.png" alt="Image">
-                    </figure>
                 </div>
-                <article class="card-content">
-                    <p class="content is-size-4">
-                        Stormy day wet and windy
-                    </p>
-                </article>
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">Low</span>
-                            <span class="temp-value">11°C</span>
-                        </div>
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">High</span>
+                        <span class="temp-value">13°C</span>
                     </div>
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">High</span>
-                            <span class="temp-value">20°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <a href="/tokyo" class="button is-fullwidth">
-                            Open
-                        </a>
-                    </div>
-                </footer>
-            </section>
-        </div>
-        <div class="column is-4">
-            <section class="card has-text-centered">
-                <header class="card-header">
-                    <h2 class="card-header-title is-size-4 is-centered">New York</h2>
-                </header>
-                <div class="card-image">
-                    <figure class="image">
-                        <img src="/images/sun.png" alt="Sun">
-                    </figure>
                 </div>
-                <article class="card-content">
-                    <p class="content is-size-4">
-                        Clear skys and hot sun
-                    </p>
-                </article>
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">Low</span>
-                            <span class="temp-value">18°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">High</span>
-                            <span class="temp-value">26°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <a href="/newyork" class="button is-fullwidth">
-                            Open
-                        </a>
-                    </div>
-                </footer>
-            </section>
-        </div>
-        <div class="column is-4">
-            <section class="card has-text-centered">
-                <header class="card-header">
-                    <h2 class="card-header-title is-size-4 is-centered">Berlin</h2>
-                </header>
-                <div class="card-image">
-                    <figure class="image">
-                        <img src="/images/hotterSun.png" alt="Sunny">
-                    </figure>
+                <div class="card-footer-item">
+                    <a href="/london" class="button is-fullwidth">
+                        Open
+                    </a>
                 </div>
-                <article class="card-content">
-                    <p class="content is-size-4">
-                        Very hot today no clouds
-                    </p>
-                </article>
-                <footer class="card-footer">
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">Low</span>
-                            <span class="temp-value">19°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <div class="box">
-                            <span class="temp-label">High</span>
-                            <span class="temp-value">26°C</span>
-                        </div>
-                    </div>
-                    <div class="card-footer-item">
-                        <a href="/berlin" class="button is-fullwidth">
-                            Open
-                        </a>
-                    </div>
-                </footer>
-            </section>
-        </div>
-        </footer>
+            </footer>
         </section>
-        </div>
-        </div>
-    </main>
-     {% include "footer.njk" %}
-</body>
-
-</html>
+    </div>
+    <div class="column is-4">
+        <section class="card has-text-centered">
+            <header class="card-header">
+                <h2 class="card-header-title is-size-4 is-centered">Paris</h2>
+            </header>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="/images/heavyrain.png" alt="Image">
+                </figure>
+            </div>
+            <article class="card-content">
+                <p class="content is-size-4">
+                    Heavy rain all day today
+                </p>
+            </article>
+            <footer class="card-footer">
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">Low</span>
+                        <span class="temp-value">9°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">High</span>
+                        <span class="temp-value">18°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <a href="/paris" class="button is-fullwidth">
+                        Open
+                    </a>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <div class="column is-4">
+        <section class="card has-text-centered">
+            <header class="card-header">
+                <h2 class="card-header-title is-size-4 is-centered">Tokyo</h2>
+            </header>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="/images/storm.png" alt="Image">
+                </figure>
+            </div>
+            <article class="card-content">
+                <p class="content is-size-4">
+                    Stormy day wet and windy
+                </p>
+            </article>
+            <footer class="card-footer">
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">Low</span>
+                        <span class="temp-value">11°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">High</span>
+                        <span class="temp-value">20°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <a href="/tokyo" class="button is-fullwidth">
+                        Open
+                    </a>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <div class="column is-4">
+        <section class="card has-text-centered">
+            <header class="card-header">
+                <h2 class="card-header-title is-size-4 is-centered">New York</h2>
+            </header>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="/images/sun.png" alt="Sun">
+                </figure>
+            </div>
+            <article class="card-content">
+                <p class="content is-size-4">
+                    Clear skys and hot sun
+                </p>
+            </article>
+            <footer class="card-footer">
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">Low</span>
+                        <span class="temp-value">18°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">High</span>
+                        <span class="temp-value">26°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <a href="/newyork" class="button is-fullwidth">
+                        Open
+                    </a>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <div class="column is-4">
+        <section class="card has-text-centered">
+            <header class="card-header">
+                <h2 class="card-header-title is-size-4 is-centered">Berlin</h2>
+            </header>
+            <div class="card-image">
+                <figure class="image">
+                    <img src="/images/hotterSun.png" alt="Sunny">
+                </figure>
+            </div>
+            <article class="card-content">
+                <p class="content is-size-4">
+                    Very hot today no clouds
+                </p>
+            </article>
+            <footer class="card-footer">
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">Low</span>
+                        <span class="temp-value">19°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <div class="box">
+                        <span class="temp-label">High</span>
+                        <span class="temp-value">26°C</span>
+                    </div>
+                </div>
+                <div class="card-footer-item">
+                    <a href="/berlin" class="button is-fullwidth">
+                        Open
+                    </a>
+                </div>
+            </footer>
+        </section>
+    </div>
+    </footer>
+    </section>
+    </div>
+    </div>
+</main>
