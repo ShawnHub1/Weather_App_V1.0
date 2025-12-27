@@ -7,9 +7,4 @@
     "editor.formatOnSave": true
   },
   "liveServer.settings.port": 5501
-  {
-  "scripts": {
-    "build": "eleventy"
-  }
-}
 }
